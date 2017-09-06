@@ -1,3 +1,4 @@
+ 
 * {
 	box-sizing: border-box;
 	font-weight: 300;
@@ -133,6 +134,47 @@ input.contact.button {
 	width: 40%;
 }
 
+.more-buttons {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 15px;
+	right: 25px;
+	background-image: url('images/more.svg');
+	background-repeat: no-repeat;
+}
+
+
+.left-right-buttons {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 5 10px;
+}
+
+ .left-arrow {
+   width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border: none;
+    background: none;
+    background-image: url('images/left-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+.right-arrow {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: none;
+    background: none;
+    background-image: url('images/right-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
 
 @media screen and (max-width: 1024px) {
