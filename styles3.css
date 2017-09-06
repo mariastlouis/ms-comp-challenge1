@@ -7,13 +7,22 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16pt;
 	color: #FFFFFF;
-	display: flex;
+}
+
+.static-container {
+display: grid;
+height: 800px;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+}
+
+.icon {
+	width: 30%;
+	height: 30%;
 }
 
 
-
-
-.main-text{
+/*.main-text{
 	font-family: 'Open Sans', sans-serif;
 	display: block;
 	font-size: 25px;
@@ -33,7 +42,6 @@ body {
 	align-items: center;
 	flex-direction: column;
 }
-
 .info-text {
 	font-size: 12px;
 	color: #FFFFFF;
@@ -51,66 +59,86 @@ body {
 
 .button:hover {
 	background: #eeba30;
-}
+}*/
 
-.square1 {
-background: #eeba30;
-}
-
-.square2 {
-background: #ae0001;
-}
-
-.square3 {
-background: #CC5C14;
-}
-
-.square4 {
-background: #ae0001;
-}
-
-.square5 {
-background: #d3a625;
-}
-
-.square6 {
+.wide-rectangle {
+grid-column: 1 / 3;
+grid-row: 1 / 2;
+display: flex;
+align-items: center;
+/*justify-content: center;
+padding-left: 20px;
+padding-right: 40px;*/
 background: #740001;
 }
 
-.square7 {
-background: #d3a625;
-}
 
 .wide-rectangle {
 	width: 100%;
 	background: #740001;
 	padding-top: 30px;
-	padding-left: 20px;
-	padding-right: 40px;
+
 }
 
-
-
 .long-rectangle {
-height: 200px;
-width: 100%
-background: #000000;
-background-image: url('images/hermione-wide.jpg');
+	grid-column: 4 / 6;
+	grid-row: 1 / 4;
+	background: red;
+	/*height: auto;
+/background-image: url('images/hermione-main.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 position: relative;
-background-position: relative;
-
-
-}	
-
-.icon {
-	width: 40%;
-	height: 40%;
+background-position: relative;*/
 }
 
+.square1{ 
+grid-column: 3 / 4;
+grid-row: 1 / 2;
+background: #eeba30;
 
-@media screen and (min-width: 600px) {
+}
+
+.square2{ 
+grid-column: 1 / 2;
+grid-row: 2 / 3;
+background: #ae0001;
+
+}
+
+.square3{
+grid-column: 2 / 3;
+grid-row: 2 / 3;
+background: #CC5C14;
+
+}
+
+.square4{ 
+grid-column: 3 / 4;
+grid-row: 2 / 3;
+background: #ae0001;
+}
+
+.square5{
+grid-column: 1 / 2;
+grid-row: 3 / 4;
+background: #d3a625;
+}
+
+.square6 {
+grid-column: 2 /3 ;
+grid-row: 3 / 4;
+background: #740001;
+}
+
+.square7 { 
+grid-column: 3 / 4;
+grid-row: 3 / 4;
+background: #d3a625;
+
+}
+
+@media screen and (max-width: 600px) {
 
 .static-container {
 	display: grid;
@@ -183,100 +211,21 @@ grid-row: 6 / 7;
 }
 
 
-
-
 }
 
+@media screen and (max-width: 400px) {  
 
-@media screen and (min-width: 900px) {
+.static-container {
+display: flex;
+}
 
 .square {
-	height: auto;
-}
-.static-container {
-display: grid;
-height: 800px;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 33.33% 33.33% 33.33%;
-}
-
-.icon {
-	width: 30%;
-	height: 30%;
-}
-
-.wide-rectangle {
-grid-column: 1 / 3;
-grid-row: 1 / 2;
-/*display: flex;
-align-items: center;
-justify-content: center;*/
-}
-
-.long-rectangle {
-	grid-column: 4 / 6;
-	grid-row: 1 / 4;
-/*	background: red;*/
-	height: auto;
-/background-image: url('images/hermione-main.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-background-position: relative;
-}
-
-/*.long-rectangle {
-grid-column: 4 / 6;
-grid-row: 1 / 3;
-display: flex;
-background-image: url('images/hermione-main.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-background-position: relative;
-
-
-}*/
-
-
-.square1{ 
-grid-column: 3 / 4;
-grid-row: 1 / 2;
-order:1;
-
-}
-
-.square2{ 
-grid-column: 1 / 2;
-grid-row: 2 / 3;
-
-}
-
-.square3{
-grid-column: 2 / 3;
-grid-row: 2 / 3;
-
-}
-
-.square4{ 
-grid-column: 3 / 4;
-grid-row: 2 / 3;
-}
-
-.square5{
-grid-column: 1 / 2;
-grid-row: 3 / 4;
-}
-
-.square6 {
-grid-column: 2 /3 ;
-grid-row: 3 / 4;
-}
-
-.square7{ 
-grid-column: 3 / 4;
-grid-row: 3 / 4;
-
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 }
+
